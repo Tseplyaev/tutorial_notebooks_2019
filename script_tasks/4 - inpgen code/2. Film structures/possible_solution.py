@@ -8,9 +8,26 @@ from aiida_fleur.calculation.fleurinputgen import FleurinputgenCalculation
 inpgen_code = load_node(8)
 
 # create a StuctureData
-Fe_structrure = load_node(??)
-Ni_structrure = load_node(??)
-Co_structrure = load_node(??)
+bohr_a_0= 0.52917721092
+a = 7.497*bohr_a_0
+cell = [[0.7071068*a, 0.0, 0.0],
+        [0.0, 1.0*a, 0.0],
+        [0.0, 0.0, 0.7071068*a]]
+
+structure = StructureData(cell=cell)
+structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Fe')
+structure.pbc = (True, True, False)
+Fe_structrure = structure
+
+structure = StructureData(cell=cell)
+structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Ni')
+structure.pbc = (True, True, False)
+Ni_structrure = structure
+
+structure = StructureData(cell=cell)
+structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Co')
+structure.pbc = (True, True, False)
+Co_structrure = structure
 
 structures = [Fe_structrure, Ni_structrure, Co_structrure]
 
@@ -20,8 +37,8 @@ parameters = Dict(dict={
         'kmax': 3.85
         },
     'kpt': {
-        'div1': 12,
-        'div2' : 10,
+        'div1': 4,
+        'div2' : 4,
         'div3' : 1
         }})
 
