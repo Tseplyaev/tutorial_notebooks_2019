@@ -8,23 +8,21 @@ from aiida_fleur.calculation.fleurinputgen import FleurinputgenCalculation
 inpgen_code = load_node(7)
 
 # create a StuctureData
-first we need to export it from .cif file using verdi
-for this run in a terminal:
+# first we need to export it from .cif file using verdi
+# for this run in a terminal:
+# verdi data cif import "PATH_TO_CIF"
 
 structure = load_node(STRUCTURE_PK)
 
 # create a parameters Dict
 parameters = Dict(dict={
     'comp': {
-        'kmax': 3.85
+        'kmax': 3.84
         },
-    'atom': {
-        'rmt' : 2.23
-        }
     'kpt': {
-        'div1': 12,
-        'div2' : 10,
-        'div3' : 1
+        'div1': 2,
+        'div2' : 2,
+        'div3' : 2
         }})
 
 # options

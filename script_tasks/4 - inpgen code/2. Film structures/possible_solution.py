@@ -18,16 +18,22 @@ structure = StructureData(cell=cell)
 structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Fe')
 structure.pbc = (True, True, False)
 Fe_structrure = structure
+Fe_structrure.store()
+print('PK of store Fe ML structure is {}'.format(Fe_structrure.pk))
 
 structure = StructureData(cell=cell)
 structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Ni')
 structure.pbc = (True, True, False)
 Ni_structrure = structure
+Ni_structrure.store()
+print('PK of store Ni ML structure is {}'.format(Ni_structrure.pk))
 
 structure = StructureData(cell=cell)
 structure.append_atom(position=(0., 0., 0.0*bohr_a_0), symbols='Co')
 structure.pbc = (True, True, False)
 Co_structrure = structure
+Co_structrure.store()
+print('PK of store Co ML structure is {}'.format(Co_structrure.pk))
 
 structures = [Fe_structrure, Ni_structrure, Co_structrure]
 

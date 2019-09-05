@@ -11,7 +11,7 @@ inpgen_code = load_node(8)
 remote = load_node(???)
 
 # load fleurinpData
-fleurinp = load_node(???)
+fleurinp = load_node(146)
 
 # import FleurinputModifier and create a new FleurinpData
 from aiida_fleur.data.fleurinpmodifier import FleurinputModifier
