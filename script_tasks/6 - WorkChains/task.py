@@ -20,9 +20,6 @@ from aiida import load_profile
 # options
 
 
-# assemble inputs in a single dictionary
-
-
 
 # submit
 
