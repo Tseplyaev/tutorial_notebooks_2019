@@ -5,10 +5,13 @@ from aiida.engine import submit
 from aiida_fleur.calculation.fleurinputgen import FleurinputgenCalculation
 
 # load ingpen Code
-inpgen_code = load_node(8)
+inpgen_code = load_node(7)
 
 # create a StuctureData
+first we need to export it from .cif file using verdi
+for this run in a terminal:
 
+structure = load_node(STRUCTURE_PK)
 
 # create a parameters Dict
 parameters = Dict(dict={
